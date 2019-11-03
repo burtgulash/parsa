@@ -45,7 +45,9 @@ def parse(s, i, end_char):
         H, i = pparse(s, i)
         R, i = pparse(s, i)
         right_assoc = 0
-        if H == "|":
+        if H == ';':
+            lvl = 4
+        elif H == "|":
             lvl = 3
             right_assoc = 1
         elif H == ",":
